@@ -18,12 +18,12 @@
     </p>
   </div>
   <div class="value">
-    <a class="sale-value">
+    <p class="sale-value">
       Valor de venda: {{imobziLocation?.sale_value}}
-    </a>
-    <a class="rental-value-sm">
+    </p>
+    <p class="rental-value">
       Valor de locação: {{imobziLocation?.rental_value}}
-    </a>
+    </p>
   </div>
   <br>
   <br>
@@ -84,9 +84,10 @@
     </tr>
 
   </table>
-
-  <h1 class="proprietarios">Proprietários:</h1>
   <br>
+
+  <h1 class="proprietario">Proprietários:</h1>
+  
   <div class="contato" *ngFor="let proprietario of imobziLocation?.owners">
     <a><mat-icon>person</mat-icon> {{proprietario.name}} - {{proprietario.email[0]}} <br>
 

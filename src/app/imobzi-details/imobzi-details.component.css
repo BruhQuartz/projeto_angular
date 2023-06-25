@@ -24,25 +24,28 @@
 }
 
 .value {
-
-  font-size: 15px;
+  padding: 5px;
   margin-top: 20px;
+  color: #605DC8;
 
 }
 
 .sale-value {
-
-  border-style: groove;
-  margin-right: 20px;
-  padding: 15px;
-  border-color: #605DC8;
+  font-size: 30px;
+  margin-top: 20px;
+  color: #605DC8;
 }
 
-.rental-value-sm {
+.rental-value {
 
-  border-style: groove;
-  padding: 15px;
-  border-color: #605DC8;
+  font-size: 30px;
+  margin-top: 20px;
+  color: #605DC8;
+
+}
+
+.feature {
+  color: #605DC8;
 
 }
 
@@ -59,22 +62,21 @@ td,
 th {
   border: 1px solid #dddddd;
   text-align: top;
-  padding: 2px;
+  padding: 5px;
   vertical-align: top;
 }
 
-.proprietario {
-  font-size: 15px;
-  margin-bottom: 50px;
-}
 
 .contato {
-  vertical-align: middle;
-  border-style: groove;
-  padding: 5px;
-  border-color: #605DC8;
-  width: 35%;
 
+  padding: 5px;
+
+}
+
+.proprietario {
+  padding: 5px;
+  font-size: 35px;
+  color: #605DC8;
 }
 
 .contato mat-icon {
@@ -89,7 +91,7 @@ th {
     height: 400px;
   }
 
-  .rental-value{
+  .rental-value {
     line-break: auto;
   }
 }
