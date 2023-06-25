@@ -1,0 +1,25 @@
+.bordaComponente {
+    border: 1px solid var(--primary-color);
+    padding: 5px;
+}
+
+/* usando o ::ng-deep e forçando uma ID, podemos sobrescrever o CSS do filho */
+::ng-deep #item .listing{
+    background-color: transparent;
+}
+
+::ng-deep #item .listing-heading {
+    color: black;
+    padding: 0%;
+}
+
+::ng-deep #item .listing-location {
+    padding: 0%;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--primary-color);
+}

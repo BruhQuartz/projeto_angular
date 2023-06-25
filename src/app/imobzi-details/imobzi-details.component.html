@@ -1,0 +1,94 @@
+<div *ngIf="loader">
+  <mat-spinner [diameter]="100" style="margin:0 auto;" color="#605DC8"></mat-spinner>
+</div>
+<!--Loader Div Ends-->
+<div *ngIf="!loader">
+
+  <img class="listing-photo" [src]="imobziLocation?.cover_photo?.url">
+
+  <div class="adress">
+    <h1> {{imobziLocation?.address}} </h1>
+    <p>
+      <mat-icon>location_on</mat-icon>
+      {{imobziLocation?.neighborhood}}, {{imobziLocation?.city}} - Cód.
+      {{imobziLocation?.code}}
+    </p>
+  </div>
+  <div class="value">
+    <a class="sale-value">
+      Valor de venda: {{imobziLocation?.sale_value}}
+    </a>
+    <a class="rental-value-sm">
+      Valor de locação: {{imobziLocation?.rental_value}}
+    </a>
+  </div>
+  <br>
+  <br>
+  <h1 class="feature">Caracteristicas:</h1>
+
+  <table class="tabela">
+    <tr>
+      <th>
+        <h1>Imóvel</h1>
+      </th>
+      <th>
+        <h1>Outros</h1>
+      </th>
+      <th>
+        <h1>Áreas Comuns</h1>
+      </th>
+      <th>
+        <h1>Proximidades</h1>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div *ngFor="let imovel of imobziLocation?.features?.['Imóvel']">
+
+          <mat-icon *ngIf="imovel.active">done</mat-icon>
+          <mat-icon *ngIf="!imovel.active">not_interested</mat-icon>
+          {{imovel.name}}
+
+        </div>
+      </td>
+      <td>
+        <div *ngFor="let outros of imobziLocation?.features?.Outros">
+
+          <mat-icon *ngIf="outros.active">done</mat-icon>
+          <mat-icon *ngIf="!outros.active">not_interested</mat-icon>
+          {{outros.name}}
+
+        </div>
+      </td>
+      <td>
+        <div *ngFor="let areacomum of imobziLocation?.features?.['Áreas Comuns']">
+
+          <mat-icon *ngIf="areacomum.active">done</mat-icon>
+          <mat-icon *ngIf="!areacomum.active">not_interested</mat-icon>
+          {{areacomum.name}}
+
+        </div>
+      </td>
+      <td>
+        <div *ngFor="let proximidade of imobziLocation?.features?.Proximidades">
+
+          <mat-icon *ngIf="proximidade.active">done</mat-icon>
+          <mat-icon *ngIf="!proximidade.active">not_interested</mat-icon>
+          {{proximidade.name}}
+
+        </div>
+      </td>
+    </tr>
+
+  </table>
+
+  <h1 class="proprietarios">Proprietários:</h1>
+  <br>
+  <div class="contato" *ngFor="let proprietario of imobziLocation?.owners">
+    <a><mat-icon>person</mat-icon> {{proprietario.name}} - {{proprietario.email[0]}} <br>
+
+      Proprietário, {{proprietario.percentage}}</a>
+
+  </div>
+
+</div>

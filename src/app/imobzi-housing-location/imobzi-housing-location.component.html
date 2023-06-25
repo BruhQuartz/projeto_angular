@@ -1,0 +1,7 @@
+<section class="listing">
+    <img class="listing-photo" [src]="housingLocation.cover_photo.url || photoNotFound">
+    <h2 class="listing-heading">{{ housingLocation.address }}</h2>
+    <p class="listing-location">{{ housingLocation.city}}, {{housingLocation.state }}</p>
+    <a [routerLink]="['/imobzidetails', housingLocation.db_id]">Learn More</a>
+  </section>
+  

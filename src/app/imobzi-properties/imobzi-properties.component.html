@@ -1,0 +1,15 @@
+<!--Loader Div Starts-->
+<div *ngIf="loader">
+
+    <mat-spinner [diameter]="100" style="margin:0 auto;" color="#605DC8"></mat-spinner>
+
+</div>
+<!--Loader Div Ends-->
+<div *ngIf="!loader">
+    <a class="numeroTotal">{{this.imobziService.getTotalItems()}} Imóveis</a>
+    <section class="results">
+        <app-imobzi-housing-location *ngFor="let housingLocation of dados" [housingLocation]="housingLocation" />
+    </section>
+
+    <button type="button" class="primary btn-showmore" *ngIf="this.imobziService.hasNextPage()" (click)="this.imobziService.getAllLocations()">Show More</button>
+</div>

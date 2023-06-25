@@ -1,0 +1,9 @@
+<div class="bordaComponente">
+    {{housingLocator.firstName}} {{housingLocator.lastName}} ({{housingLocator.email}})
+    <!-- criar um ngFor em housingLocator.houseIds-->
+    <div *ngFor="let house of housingLocations; index as i">
+        <hr *ngIf="i > 0" />
+        <!-- buscar a casa usando id e usar o componente app-housing-location passando a casa encontrada -->
+        <app-housing-location id="item" [showPicture]="false" [housingLocation]="house" />
+    </div>
+</div>

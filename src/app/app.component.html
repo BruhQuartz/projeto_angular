@@ -1,0 +1,36 @@
+
+<mat-toolbar>
+  <mat-toolbar-row>
+   
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <a [routerLink]="['/']">
+        <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
+      </a>
+  
+    
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side">
+    <mat-nav-list class="toolbarlist">
+      <a mat-list-item [routerLink]="['/']" class="listitem"><mat-icon>home</mat-icon> Home</a>
+      <a mat-list-item routerLink="/contacts"><mat-icon>person</mat-icon> Contacts</a>
+      <a mat-list-item routerLink="/properties"><mat-icon svgIcon="imobzi"></mat-icon> Properties</a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content style="height:88vh;">
+    <div *ngIf="challengeEnabled" >
+      <my-sidebar [isExpanded]="sidebarExpanded" (toggleSidebar)="sidebarExpanded = !sidebarExpanded"></my-sidebar>
+    </div>
+
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>
