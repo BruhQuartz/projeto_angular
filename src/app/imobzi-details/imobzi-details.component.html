@@ -1,12 +1,16 @@
 <div *ngIf="loader">
-  <mat-spinner [diameter]="100" style="margin:0 auto;" color="#605DC8"></mat-spinner>
+
+    <!-- <mat-spinner [diameter]="100" style="margin:0 auto;" color="#605DC8"></mat-spinner> -->
+    <my-loader></my-loader>
+
 </div>
 <!--Loader Div Ends-->
 <div *ngIf="!loader">
 
-  <img class="listing-photo" [src]="imobziLocation?.cover_photo?.url">
+  <img class="listing-photo" [src]="imobziLocation?.cover_photo?.url || this.photoNotFound">
 
   <div class="adress">
+    <br>
     <h1> {{imobziLocation?.address}} </h1>
     <p>
       <mat-icon>location_on</mat-icon>

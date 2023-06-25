@@ -14,6 +14,7 @@ import { ImobziHousingLocationComponent } from './imobzi-housing-location/imobzi
 import {ImobziPropertiesComponent} from './imobzi-properties/imobzi-properties.component';
 import { ImobziDetailsComponent } from './imobzi-details/imobzi-details.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoaderComponent } from './loadercomponent/loader.component';
 
 
 
@@ -35,6 +36,7 @@ import {ContactsCardComponent} from './contactcard/contact-card.component';
     ImobziHousingLocationComponent,
     ImobziPropertiesComponent,
     ImobziDetailsComponent,
+    LoaderComponent,
     
   ],
   imports: [

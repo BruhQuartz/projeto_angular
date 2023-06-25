@@ -5,6 +5,7 @@ import { DetailsComponent } from './details/details.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ImobziPropertiesComponent } from './imobzi-properties/imobzi-properties.component';
 import { ImobziDetailsComponent } from './imobzi-details/imobzi-details.component';
+import { LoaderComponent } from './loadercomponent/loader.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,11 @@ const routes: Routes = [
     path: 'imobzidetails/:id',
     component: ImobziDetailsComponent,
     title: 'Imobzi home details'
+  },
+  {
+    path: 'loadercomponent/',
+    component: LoaderComponent,
+    title: 'Loader'
   },
 ];
 
