@@ -13,7 +13,6 @@ export class ImobziDetailsComponent {
     imobziService = inject(ImobziService);
     route = inject(ActivatedRoute);
     imobziLocation?: ImobziLocation;
-
     photoNotFound = 'https://my.imobzi.com/assets/images/image-not-found.png';
 
     loader = true;
