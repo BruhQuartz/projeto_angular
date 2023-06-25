@@ -1,8 +1,8 @@
 
-import { Component, inject } from "@angular/core";
+import { Component, inject, OnInit } from "@angular/core";
 import { ImobziService } from "../imobzi-service";
 import { ImobziLocation } from "../imobzilocation";
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
+
 
 @Component({
   selector: "my-imobziproperties",
@@ -18,7 +18,14 @@ export class ImobziPropertiesComponent {
 
   constructor() {
     this.dados = this.imobziService.getAllLocations();
-    this.loader = false;
   }
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.loader = false;
+    }, 1000);
+  }
+
+
 
 }

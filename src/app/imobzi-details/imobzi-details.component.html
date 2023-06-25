@@ -1,7 +1,6 @@
 <div *ngIf="loader">
 
-    <!-- <mat-spinner [diameter]="100" style="margin:0 auto;" color="#605DC8"></mat-spinner> -->
-    <my-loader></my-loader>
+  <my-loader></my-loader>
 
 </div>
 <!--Loader Div Ends-->
@@ -11,7 +10,7 @@
 
   <div class="adress">
     <br>
-    <h1> {{imobziLocation?.address}} </h1>
+    <h2> {{imobziLocation?.address}} </h2>
     <p>
       <mat-icon>location_on</mat-icon>
       {{imobziLocation?.neighborhood}}, {{imobziLocation?.city}} - Cód.
